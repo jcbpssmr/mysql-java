@@ -1,0 +1,8 @@
+package project.entity;
+
+public class Unit {
+	private Integer unitId;
+	private Integer  projcetId;
+	private String unitName;
+
+}

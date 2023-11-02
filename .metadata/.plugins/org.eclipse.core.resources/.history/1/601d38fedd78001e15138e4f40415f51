@@ -1,0 +1,84 @@
+package project.entity;
+
+import java.time.LocalDateTime;
+import java.util.LinkedList;
+import java.util.List;
+
+public class Project {
+	private Integer projcetId;
+	private String  projcetName;
+	private Integer estimatedHours;
+	private Integer actualHours;
+	private Integer difficulty;
+	private String notes;
+	private LocalDateTime createdAt;
+	
+	private List<Materials> materials = new LinkedList<>();
+	private List<Steps> steps = new LinkedList<>();
+	private List<Categories> Categories = new LinkedList<>();
+	public Integer getProjcetId() {
+		return projcetId;
+	}
+	public void setProjcetId(Integer projcetId) {
+		this.projcetId = projcetId;
+	}
+	public String getProjcetName() {
+		return projcetName;
+	}
+	public void setProjcetName(String projcetName) {
+		this.projcetName = projcetName;
+	}
+	public Integer getEstimatedHours() {
+		return estimatedHours;
+	}
+	public void setEstimatedHours(Integer estimatedHours) {
+		this.estimatedHours = estimatedHours;
+	}
+	public Integer getActualHours() {
+		return actualHours;
+	}
+	public void setActualHours(Integer actualHours) {
+		this.actualHours = actualHours;
+	}
+	public Integer getDifficulty() {
+		return difficulty;
+	}
+	public void setDifficulty(Integer difficulty) {
+		this.difficulty = difficulty;
+	}
+	public String getNotes() {
+		return notes;
+	}
+	public void setNotes(String notes) {
+		this.notes = notes;
+	}
+	public LocalDateTime getCreatedAt() {
+		return createdAt;
+	}
+	public void setCreatedAt(LocalDateTime createdAt) {
+		this.createdAt = createdAt;
+	}
+	public List<Materials> getMaterials() {
+		return materials;
+	}
+	public void setMaterials(List<Materials> materials) {
+		this.materials = materials;
+	}
+	public List<Steps> getSteps() {
+		return steps;
+	}
+	public void setSteps(List<Steps> steps) {
+		this.steps = steps;
+	}
+	public List<Categories> getCategories() {
+		return Categories;
+	}
+	public void setCategories(List<Categories> categories) {
+		Categories = categories;
+	}
+	
+	
+}
+
+
+

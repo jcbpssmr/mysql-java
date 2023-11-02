@@ -1,0 +1,50 @@
+package project.entity;
+
+import java.math.BigDecimal;
+
+public class Materials {
+	private Integer materialId;
+	private Integer  projcetId;
+	private String materialName;
+	private Unit numRequired;
+	private BigDecimal cost;
+	
+	public Integer getMaterialId() {
+		return materialId;
+	}
+	public void setMaterialId(Integer materialId) {
+		this.materialId = materialId;
+	}
+	@Override
+	public String toString() {
+		return "Materials [materialId=" + materialId + ", projcetId=" + projcetId + ", materialName=" + materialName
+				+ ", numRequired=" + numRequired + ", cost=" + cost + "]";
+	}
+	public Integer getProjcetId() {
+		return projcetId;
+	}
+	public void setProjcetId(Integer projcetId) {
+		this.projcetId = projcetId;
+	}
+	public String getMaterialName() {
+		return materialName;
+	}
+	public void setMaterialName(String materialName) {
+		this.materialName = materialName;
+	}
+	public Unit getNumRequired() {
+		return numRequired;
+	}
+	public void setNumRequired(Unit numRequired) {
+		this.numRequired = numRequired;
+	}
+	public BigDecimal getCost() {
+		return cost;
+	}
+	public void setCost(BigDecimal cost) {
+		this.cost = cost;
+	}
+	
+	
+
+}

@@ -1,0 +1,13 @@
+package project.entity;
+
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+
+public class Materials {
+	private Integer materialId;
+	private Integer  projcetId;
+	private String materialName;
+	private Unit numRequired;
+	private BigDecimal cost;
+
+}
