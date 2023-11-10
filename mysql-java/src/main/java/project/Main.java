@@ -10,9 +10,12 @@ import project.service.ProjectService;
 public class Main {
 	private Scanner scanner = new Scanner(System.in);
 	private ProjectService projectService = new ProjectService();
+	private Project curProject;
 	//@formatter:off
 			private List<String> operations = List.of(
-					"1) Add a project");
+					"1) Add a project",
+					"2) List Projects",
+					"3) Select a project");
 			
 			
 			//@formatter:on
@@ -35,6 +38,14 @@ public class Main {
 				case 1:
 					addProject();
 					break;
+				
+				case 2:
+					listProjects();
+					break;
+					
+				case 3:
+					selectProject();
+					break;
 					
 				default:
 					System.out.println("\n" + operation + " is not valid. Try again.");
@@ -55,7 +66,8 @@ public class Main {
 	
 		Project project = new Project();
 		
-		project.setProjcetName(project_name);
+		//project.setProjectId(project_id);
+		project.setProjectName(project_name);
 		project.setNotes(notes);
 		project.setEstimatedHours(estimated_hours);
 		project.setActualHours(actual_hours);
@@ -66,6 +78,32 @@ public class Main {
 		
 		
 	}
+	
+	private void selectProject() {
+		listProjects();
+		Integer projectId = getIntInput("Enter a project ID: ");
+		// Reselect
+		curProject = null;
+		// throw exception for invalid project selection
+		curProject = projectService.fetchProjectById(projectId);
+		if(Objects.isNull(curProject)) {
+			System.out.println("\nYou are not working on a project");
+		}
+		else {
+			System.out.println("\nYou are working with project " + curProject);
+		}
+	}
+	
+
+	
+
+	private void listProjects() {
+		List<Project> projects = projectService.fetchAllProjects();
+		System.out.println("\nProjects: ");
+		projects.forEach(project-> System.out.println("     " + project.getProjectId() + ": " + project.getProjectName()));
+	}
+	
+	
 	private BigDecimal getBigDecimal(String prompt) {
 		String input = getStringInput(prompt);
 		if(Objects.isNull(input)) {
@@ -115,6 +153,13 @@ public class Main {
 		System.out.println("Here is what you can do: ");
 		
 		operations.forEach(op -> System.out.println(op));
+		
+		if(Objects.isNull(curProject)) {
+			System.out.println("\nYou are not working on a project");
+		}
+		else {
+			System.out.println("\nYou are working with project " + curProject);
+		}
 	}
-	
+
 }

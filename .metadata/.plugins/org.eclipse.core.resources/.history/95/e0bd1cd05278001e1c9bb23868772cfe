@@ -1,7 +1,0 @@
-package project.entity;
-
-public class Categories {
-	private Integer categoryId;
-	private String categoryName;
-
-}

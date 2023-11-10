@@ -1,9 +1,0 @@
-package project.entity;
-
-public class Steps {
-	private Integer stepId;
-	private Integer projectId;
-	private Integer stepOrder;
-	private String stepText;
-
-}

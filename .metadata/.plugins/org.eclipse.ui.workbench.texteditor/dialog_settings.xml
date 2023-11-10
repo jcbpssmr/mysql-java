@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value=""/>
+		<item key="selection" value="createdAt"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="createdAt"/>
+			<item value="createdAt = null"/>
+			<item value="fetchAllProjects"/>
+			<item value="LIst"/>
+			<item value="getProjectId"/>
+			<item value="add"/>
 			<item value="getConnection"/>
 			<item value="Connection successful jdbc:mysql://localhost:3306/projects?user=projects&amp;password=projects"/>
 			<item value="AUTO_INCREMENT"/>
@@ -17,10 +23,10 @@
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="681"/>
-		<item key="DIALOG_Y_ORIGIN" value="184"/>
-		<item key="DIALOG_WIDTH" value="336"/>
-		<item key="DIALOG_HEIGHT" value="402"/>
+		<item key="DIALOG_X_ORIGIN" value="798"/>
+		<item key="DIALOG_Y_ORIGIN" value="120"/>
+		<item key="DIALOG_WIDTH" value="326"/>
+		<item key="DIALOG_HEIGHT" value="400"/>
 		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>
 	</section>
 </section>

@@ -1,8 +1,0 @@
-package project.service;
-
-public class ProjectService {
-	private static final String SCHEMA_FILE = "project_schema.sql";
-	
-	
-	private ProjectDao recipeDao = new RecipeDao();
-}
