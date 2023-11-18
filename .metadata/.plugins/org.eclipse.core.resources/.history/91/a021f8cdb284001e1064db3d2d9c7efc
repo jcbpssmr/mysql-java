@@ -71,13 +71,11 @@ public class Main {
 		listProjects();
 		Integer projectId = getIntInput("Enter the project to delete");
 		
-		if(Objects.nonNull(projectId)) {
-			projectService.deleteProject(projectId);
-			
-			
-			if(Objects.nonNull(curProject) && curProject.getProjectId().equals(projectId)) {
+		projectService.deleteProject(projectId);
+		System.out.println("Project" + projectId + " was deleted successfully.");
+		
+		if(Objects.nonNull(curProject) && curProject.getProjectId().equals(projectId)) {
 			curProject = null;
-			}
 		}
 	}
 

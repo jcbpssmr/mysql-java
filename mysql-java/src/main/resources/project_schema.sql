@@ -47,3 +47,5 @@ CREATE TABLE project_category (
     UNIQUE KEY (project_id, category_id)
 );
 
+
+

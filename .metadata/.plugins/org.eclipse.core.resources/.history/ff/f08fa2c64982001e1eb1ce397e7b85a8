@@ -16,8 +16,7 @@ public class Main {
 					"1) Add a project",
 					"2) List Projects",
 					"3) Select a project",
-					"4) Update project details",
-					"5) Delete Project");
+					"4) Update project details");
 			
 			
 			//@formatter:on
@@ -71,20 +70,18 @@ public class Main {
 		listProjects();
 		Integer projectId = getIntInput("Enter the project to delete");
 		
-		if(Objects.nonNull(projectId)) {
-			projectService.deleteProject(projectId);
-			
-			
-			if(Objects.nonNull(curProject) && curProject.getProjectId().equals(projectId)) {
+		projectService.deleteProject(projectId);
+		System.out.println("Project" + projectId + " was deleted successfully.");
+		
+		if(Objects.nonNull(curProject) && curProject.getProjectId().equals(projectId)) {
 			curProject = null;
-			}
 		}
 	}
 
 	private void updateProject() {
-		if (Objects.isNull(curProject)) {
+		if (curProject == null) {
 			System.out.println("\nPlease select a project");
-			
+			selectProject();
 		}
 		String projectName = getStringInput("Enter the project name [" + curProject.getProjectName()+ "]");
 		BigDecimal estimatedHours = getBigDecimal("Enter the Estimated hours [" + curProject.getEstimatedHours()+ "]");
